@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- The title that appears on the browser tab -->
+    <title>Resurwreck autos</title>
+    <link rel="icon" type="image/png" href="Images/32logo.png">
+    <style>
+        /* Styling for the overall page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightgray;
+        }
+        /* Styling for the header section */
+        header {
+            background-color: darkgray;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo img {
+            max-width: 400px; /* Adjust the size as needed */
+            height: auto;
+        }
+        /* Styling for the main content container */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+        /* Style for the grid */
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+        .car {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            /* Set a fixed height for the car elements to avoid some looking weird */
+            height: 320px;
+        }
+        .car img {
+            max-width: 100%;
+            height: 180px; /* Adjust the height as needed */
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Images/logo.jpg" alt="My Logo">
+        </div>
+    </header>
+    <div class="container">
+        <h2>About Resurwreck</h2>
+        <p>This is an example paragraph. Maybe add information about the company, etc. This will show on the home page.</p>
+    </div>
+    <div class="container">
+        <h2>Current Car Projects</h2>
+        <p>To see the current cars that I am working on, check out the cars below:</p>
+        <!-- Grid of cars, first 3 -->
+        <div class="car-grid">
+            <div class="car">
+                <img src="Images/car1.jpg" alt="Car 1">
+                <h3>Car Model 1</h3>
+                <p>A sleek and stylish car with powerful performance.</p>
+            </div>
+            <div class="car">
+                <img src="Images/car2.jpg" alt="Car 2">
+                <h3>Car Model 2</h3>
+                <p>An elegant sedan known for its comfort and luxury features.</p>
+            </div>
+            <div class="car">
+                <img src="Images/car3.jpg" alt="Car 3">
+                <h3>Car Model 3</h3>
+                <p>A rugged off-road vehicle built for adventure.</p>
+            </div>
+            <!-- Additional cars, second 3 -->
+            <div class="car">
+                <img src="Images/car4.jpg" alt="Car 4">
+                <h3>Car Model 4</h3>
+                <p>A compact car perfect for city driving.</p>
+            </div>
+            <div class="car">
+                <img src="Images/car5.jpg" alt="Car 5">
+                <h3>Car Model 5</h3>
+                <p>A sporty coupe designed for high performance.</p>
+            </div>
+            <div class="car">
+                <img src="Images/car6.jpg" alt="Car 6">
+                <h3>Car Model 6</h3>
+                <p>A hybrid vehicle combining efficiency and power.</p>
+            </div>
+            <!-- Add more cars as needed -->
+        </div>
+    </div>
+</body>
+</html>
