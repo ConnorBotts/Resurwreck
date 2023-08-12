@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+
     <title>Resurwreck autos</title>
     <link rel="icon" type="image/png" href="Images/32logo.png">
     <style>
@@ -28,7 +28,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
             padding: 20px;
             background-color: white;
@@ -37,20 +37,37 @@
 
         .car-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             grid-gap: 20px;
         }
         .car {
             border: 1px solid #ddd;
+            display: grid;
+            grid-template-rows: auto auto;
+            height: 500px;
+            width: 400px;
+        }
+        .car-top {
+            border-bottom: 1px solid #ddd;
             padding: 10px;
             text-align: center;
-
-            height: 320px;
         }
+
+        .car-bottom {
+          padding: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+            height: 78%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         .car img {
-            max-width: 100%;
-            height: 180px;
-            object-fit: cover;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
         footer {
             background-color: darkgray;
@@ -86,6 +103,35 @@
             border-radius: 5px;
             box-sizing: border-box;
         }
+
+        a:link {
+            color: blue;
+            text-decoration: none;
+        }
+
+
+        a:visited {
+            color: blue;
+            text-decoration: none;
+        }
+
+
+        a:hover {
+            color: green;
+            text-decoration: underline;
+        }
+        .car ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .car li {
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -100,38 +146,28 @@
     </div>
     <div class="container">
         <h2>Current Car Projects</h2>
-        <p>Pictured below are all the cars I'm currently working on. Check them out!</p>
+        <p>Pictured below are all the cars for sale. Click on the model name to view the vehicle listing on facebook!</p>
 
         <div class="car-grid">
-            <div class="car">
-                <img src="Images/car1.jpg" alt="Car 1">
-                <h3>Car Model 1</h3>
-                <p>Description of car.</p>
-            </div>
+              <div class="car">
+                  <div class="car-top">
+                      <img src="Images/car1.jpg" alt="Car 1">
+                  </div>
+                  <div class="car-bottom">
+                      <h3><a href="https://www.facebook.com/marketplace/item/6547319958652952/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A82058b9e-da0a-4165-b819-9d73335efe73" target="_blank">Fiat 500 Lounge</a></h3>
+                      <ul>
+                          <li>Driven: 38,245 km</li>
+                          <li>Transmission: Manual</li>
+                          <li>Exterior color: Red</li>
+                          <li>Fuel type: Gasoline</li>
+                          <li>Engine size: 1.2 L</li>
+                          <li>Number of owners: 2</li>
+                      </ul>
+                  </div>
+              </div>
             <div class="car">
                 <img src="Images/car2.jpg" alt="Car 2">
                 <h3>Car Model 2</h3>
-                <p>Description of car</p>
-            </div>
-            <div class="car">
-                <img src="Images/car3.jpg" alt="Car 3">
-                <h3>Car Model 3</h3>
-                <p>Description of car</p>
-            </div>
-
-            <div class="car">
-                <img src="Images/car4.jpg" alt="Car 4">
-                <h3>Car Model 4</h3>
-                <p>Description of car</p>
-            </div>
-            <div class="car">
-                <img src="Images/car5.jpg" alt="Car 5">
-                <h3>Car Model 5</h3>
-                <p>Description of car</p>
-            </div>
-            <div class="car">
-                <img src="Images/car6.jpg" alt="Car 6">
-                <h3>Car Model 6</h3>
                 <p>Description of car</p>
             </div>
 
