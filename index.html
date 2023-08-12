@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- The title that appears on the browser tab -->
+    
     <title>Resurwreck autos</title>
     <link rel="icon" type="image/png" href="Images/32logo.png">
     <style>
-        /* Styling for the overall page */
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: lightgray;
         }
-        /* Styling for the header section */
+
         header {
             background-color: darkgray;
             color: white;
@@ -26,7 +26,7 @@
             max-width: 400px;
             height: auto;
         }
-        /* Styling for the main content container */
+
         .container {
             max-width: 800px;
             margin: 20px auto;
@@ -34,7 +34,7 @@
             background-color: white;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
         }
-        /* Style for the grid */
+
         .car-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -44,13 +44,47 @@
             border: 1px solid #ddd;
             padding: 10px;
             text-align: center;
-            /* Set a fixed height for the car elements to avoid some looking weird */
+
             height: 320px;
         }
         .car img {
             max-width: 100%;
             height: 180px;
             object-fit: cover;
+        }
+        footer {
+            background-color: darkgray;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        input[type="submit"] {
+            margin-top: 10px;
+        }
+
+
+        input[type="email"],
+        textarea {
+            width: 50%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -67,7 +101,7 @@
     <div class="container">
         <h2>Current Car Projects</h2>
         <p>Pictured below are all the cars I'm currently working on. Check them out!</p>
-        <!-- Grid of cars, first 3 -->
+
         <div class="car-grid">
             <div class="car">
                 <img src="Images/car1.jpg" alt="Car 1">
@@ -84,7 +118,7 @@
                 <h3>Car Model 3</h3>
                 <p>Description of car</p>
             </div>
-            <!-- Additional cars, second 3 -->
+
             <div class="car">
                 <img src="Images/car4.jpg" alt="Car 4">
                 <h3>Car Model 4</h3>
@@ -100,9 +134,9 @@
                 <h3>Car Model 6</h3>
                 <p>Description of car</p>
             </div>
-            <!-- Add more cars as needed -->
+
         </div>
-        <!-- Embed latest YouTube video -->
+
         <h2>Latest YouTube Video</h2>
         <div id="latest-video"></div>
     </div>
@@ -111,14 +145,14 @@
         const apiKey = 'AIzaSyAZsLHR4LSgmBgAfSA49zl5l276eoDQAWY';
         const channelId = 'UCAqsrn4SFuV6hz5dF82UD5g';
 
-        // Make API request
+
         fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&type=video&order=date&channelId=${channelId}&maxResults=1`)
             .then(response => response.json())
             .then(data => {
                 const videoId = data.items[0].id.videoId;
                 const embedUrl = `https://www.youtube.com/embed/${videoId}`;
 
-                // Embed the video
+
                 const videoContainer = document.getElementById('latest-video');
                 videoContainer.innerHTML = `
                     <iframe width="560" height="315" src="${embedUrl}" frameborder="0" allowfullscreen></iframe>
@@ -129,5 +163,11 @@
             });
     </script>
     </div>
+    <body>
+    <footer>
+        <h2>Contact Us</h2>
+        <p>Have any questions or comments? Feel free to reach out to us.</p>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSewvwCrksH747nxKx4oP0Ne3Wq34eZ41PYST2Dmzcn6kAlfSg/viewform?embedded=true" width="640" height="586" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </footer>
 </body>
 </html>
